@@ -1,0 +1,779 @@
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+    color: white;
+    font-size: 4rem;
+}
+.page{
+    display: none;
+}
+body{
+    font-family: "Open Sans", serif;
+}
+.hero{
+    background-image: url(../image/single-image.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.navbar{
+    position: absolute;
+}
+.navbar-mov{
+    position: fixed !important;
+    z-index: 9999;
+    background-color: #fff;
+    padding: 0;
+    box-shadow: 5px 5px 15px 0 rgba(31, 31, 31, 0.07);
+}
+.navbar, .m-sec>h2{
+    font-family: "Poppins", sans-serif;
+}
+.navbar .navbar-nav > li > a {
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+.nav-scroll-a{
+    color: #282828;
+    font-size: 13px;
+}
+.active{
+    color: #4e9cb5 !important;
+}
+.navbar.show {
+    background: #fff;
+    margin-top: 20px;
+    width: 100%;
+    z-index: 100;
+}
+.m-sec>h2{
+    font-size: 70px;
+}
+.m-sec>p{
+    font-size: 18px;
+    line-height: 1.75em;
+}
+.btn-defult{
+    border-radius: 3px;
+    padding: 18px 30px;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-start{
+    background-color: #4e9cb5;
+}
+.btn-start:hover{
+    background-color: #67AAC0;
+    border: 0px;
+}
+.btn-view{
+    color: white;
+    opacity: .8;
+    border: 0px;
+}
+.btn-view:hover{   
+    color: white;
+    border: 0px ;
+    opacity: 1;
+}
+.move-dwn{
+    position: absolute;
+    width: 26px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 13px;
+    background: transparent;
+    bottom: 30px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.move-dwn a {
+    display: block;
+    width: 26px;
+    height: 40px;
+}
+.move-dwn:hover{
+    border-color: #4e9cb5;
+}
+.move-dwn:hover span{
+    background: #4e9cb5;
+}
+.move-dwn span{
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 6px;
+    left: 0;
+    right: 0;
+    animation: down 1.7s infinite ease;
+}
+@keyframes down {
+    0% {
+        top: 6px;
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        top: 18px;
+        opacity: 0;
+    }
+}
+
+/* ------------------------------about-------------------- */
+
+.title h2{
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 38px;
+    line-height: 38px;
+    font-weight: 700;
+}
+.title h2::before{
+    content: 'A';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    opacity: .06;
+}
+.title h2::after{
+    content: '';
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: .5px;
+    background-color: black;
+    transition: all 500ms ease;
+}
+.title h2:hover::after{
+    width: 60px;
+}
+.title p{
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 70px;
+}
+.progress {
+    height: 4px;
+    margin-bottom: 20px;
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: none;
+}
+.progress-bar{
+    transition: all ease 1s;
+    background-color: #4e9cb5;
+}
+
+/*--------------------- mission---------------------------- */
+
+.mission{
+    background-image: url(../image/mission.jpg);
+    background-position: center ;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.m-icon:hover i ,.m-icon:hover h3{
+    color: #4e9cb5;
+}
+.icon i{
+    color: #fff;
+    font-size: 40px;
+}
+.icon+h3{
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 40px;
+}
+social a:hover > i {
+    color: #4e9cb5;
+}
+.m-body h2{
+    font-size: 38px;
+    line-height: 38px;
+    font-weight: 700;
+}
+.m-body p{
+    font-size: 14px;
+}
+
+/* ----------------------team-------------------- */
+
+.team .title h2::before{
+    content: 'O';
+}
+.team-img {
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.team-img .layer{
+    background-color: rgba(78, 156, 181, 0.85);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+.team-img .team-social{
+    color: #fff;
+    transform: translateY(10px);
+    transition: all .3s ease-in;
+}
+.team-img:hover img{
+    transition: all .3s ease;
+}
+.team-img:hover .layer{
+    opacity: 1;
+}
+.team-img:hover img{
+    transform: scale(1.12);
+}
+.team-img:hover .team-social{
+    transform: unset;
+}
+
+/* --------------------------projects---------------------------- */
+
+.projects,.services,.client,.blog,.contact{
+    background-color: #fafafa;
+}
+.projects .title h2::before{
+    content: 'P';
+}
+.portfolio-filters span {
+    padding: 3px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.75em;
+    color: #282828;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.portfolio-filters span:hover {
+    color: #4e9cb5;
+}
+.img-overlay {
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    opacity: 0;
+    color: #666;
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(10px);
+    transition: all 0.3s;
+}
+.overlay-info h6 {
+    transform: translateY(-15px);
+    transition: all .5s;
+    font-family: "Poppins", sans-serif;
+    color: #282828;
+    font-weight: 600;
+}
+.outer-overlay:hover .img-overlay{
+    opacity: 1;
+    transform: unset;
+}
+.outer-overlay:hover .overlay-info h6{
+    transform: unset;
+}
+.portfolio-filters .active{
+    border-color: #4e9cb5;
+}
+
+/* ----------------------------do------------------- */
+
+.do-have h3{
+    font-size: 32px;
+    line-height: 50px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* ----------------services----------------------- */
+
+.services .title h2::before{
+    content: 'S';
+}
+.s-icon i{
+    color: #4e9cb5;
+}
+.s-text h3{
+    font-size: 18px;
+    transition: all .3s;
+    font-family: "Poppins", sans-serif;
+    color: #282828;
+    font-weight: 600;
+}
+.s-text:hover  h3{
+    color: #4e9cb5;
+}
+.s-text p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* ----------------video-------------------- */
+
+.video{
+    background-image: url(../image/video.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center top;
+}
+.play-video i{
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 64px;
+    width: 70px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    text-indent: 4px;
+    transition: all 0.3s;
+}
+.video-text{
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+.overlay-video{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.play-video:hover i{
+    transform: scale(1.15);
+    background-color: #fff;
+}
+.play-video:hover i::before{
+    color: #4e9cb5;
+}
+.layout-video{
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 99999999999;
+}
+.video-close{
+    position: absolute;
+    top: -35px;
+    right: 0;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ------------------------client---------------- */
+
+.client .title h2::before{
+    content: 'C';
+}
+.slider-nav .clien-img img{
+    cursor: pointer;
+    padding: 12px;
+    transition: all 0.3s;
+    opacity: 0.5;
+    border-radius: 50%;
+}
+.slider-nav .client-info {
+    margin-top: 20px;
+    text-align: center;
+    transition: all 0.3s;
+    visibility: hidden;
+    opacity: 0;
+}
+.slider-nav .client-info h3 {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: #282828;
+    font-weight: 600;
+}
+.slider-nav .client-info span {
+    display: block;
+    color: #666;
+    margin-top: 7px;
+    line-height: 1;
+    font-size: 14px;
+
+}
+.slick-center img {
+    padding: 0 !important;
+    opacity: 1 !important;
+}
+.slick-center .client-info {
+    visibility: visible;
+    opacity: 1;
+}
+.single-box p {
+    font-size: 25px;
+    line-height: 1.5em;
+    color: #666;
+}
+
+/* --------------------------------counter--------------------------- */
+
+.counter-icon i{
+    position: relative;
+    display: block;
+    font-size: 48px;
+    line-height: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4e9cb5;
+}
+.number-count{
+    font-weight: 700;
+    font-size: 45px !important;
+    line-height: 45px;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+}
+.counter-content{
+    border-right: 1px solid  rgba(255, 255, 255, 0.25);
+}
+.counter-content p {
+    font-size: 14px;
+    line-height: 14px;
+}
+.brd-right {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.brd-bottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ----------------------------------blog--------------------------------- */
+
+.blog .title h2::before{
+    content: 'B';
+}
+.blog-category {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 11px;
+    line-height: 11px;
+    font-weight: 600;
+    border-radius: 3px 0 0 3px;
+    text-transform: uppercase;
+    background-color: #4e9cb5;
+}
+.card-img img{
+    transition: all .3s;
+}
+.card-img img:hover{
+    transform: scale(1.2);
+}
+.blog-about{
+    color: #999;
+    font-size: 12px;
+    font-weight: 600;
+}
+.blog-about > span {
+    font-weight: 400;
+}
+.blog-about a ,.blog-text a{
+    text-decoration: none;
+    color: #444;
+    transition:all .3s;
+}
+.blog-about a:hover ,.blog-text a:hover{
+    color: #337ab7;
+}
+.blog-text div a{
+    font-size: 24px;
+    line-height: 24px;
+    font-family: "Poppins", sans-serif;
+    color: #282828;
+    font-weight: 600;
+}
+.read-more{
+    color: #337ab7;
+    transition: all .3;
+}.read-more:hover{
+    color: #282828;
+}
+
+/* ----------------------------buy------------------------------- */
+
+.buy{
+    background-image: url(../image/pricing.jpg);
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.buy .title h2::before{
+    content: '';
+}
+.buy .title h2::after{
+    background-color: white;
+}
+.price-title > h5 {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #282828;
+}
+.price-title .price-rate .currency {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 45px;
+    vertical-align: top;
+    color: #444;
+}
+.price-title .price-rate .rate {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 70px;
+}
+.price-title .price-rate .time {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #444;
+}
+.list-group-item{
+    color: #444;
+}
+.price-footer {
+    clear: both;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: #111;
+    padding: 12px 0;
+    border-radius: 0 0 3px 3px;
+}
+.professional{
+    transform: scaleY(1.1);
+}
+.professional .price-title{
+    background-color: #4e9cb5 !important;
+    border-radius: 3px 3px 0px 0px;
+}
+.card-ribbon {
+    position: absolute;
+    overflow: hidden;
+    top: -10px;
+    left: -10px;
+    width: 114px;
+    height: 114px;
+    z-index: 99;
+}
+.card-ribbon span {
+    position: absolute;
+    display: block;
+    width: 165px;
+    padding: 9px 0;
+    background-color: #23292c;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    left: -37px;
+    top: 21px;
+    letter-spacing: 1px;
+    transform: rotate(-45deg);
+}
+.card-ribbon:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    display: block;
+    border: 5px solid #0c0c0c;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    top: 0;
+    right: 3px;
+}
+.card-ribbon:after {
+    bottom: 3px;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    display: block;
+    border: 5px solid #0c0c0c;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+.b-title:hover h5,.b-title:hover .price-rate i,.b-title:hover .rate,.b-title:hover .time{
+    color:#4e9cb5;
+}
+.client-owl img {
+    width: 80px !important;
+    margin: 0 auto;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+.owl-dots{
+    display: none !important;
+}
+
+/* ----------------------------------contact---------------------------- */
+
+.contact .title h2::before{
+    content: 'C';
+}
+.contact-title h3{
+    font-family: "Poppins", sans-serif;
+    color: #282828;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 32px;
+}
+.contact-info .icon i{
+    color:#4e9cb5
+}
+.contact-text h4{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #282828;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0;
+}
+.contact-text p ,.contact-text a{
+    color: #666;
+    font-size: 14px;
+    text-decoration: none;
+}
+.contact-text >*:hover{
+    color: #4e9cb5;
+}
+.contact input,.contact textarea, .contact button{
+    line-height: 1;
+    padding: 14px 18px;
+    color: #a6a6a6;
+    border-radius: 3px;
+    border: 2px solid #eee;
+    background-color: #fff;
+    box-shadow: none !important;
+    -webkit-transition: border-color 0.15s ease-in;
+    -moz-transition: border-color 0.15s ease-in;
+    transition: border-color 0.15s ease-in;
+}
+.contact input:focus{
+    border-color: #4e9cb5;
+}
+.contact button{
+    padding: 18px 20px;
+    color: #fff;
+    background-color: #4e9cb5;
+    border-radius: 5px;
+}
+.contact button:hover{
+    background-color: #67AAC0;
+}
+.check-input{
+    font-size: 14px;
+    color: #dc3232;
+}
+
+/* ----------------------------------footer------------------------- */
+
+footer{
+    background-image: url(../image/dotted-map.png);
+    background-size: contain;
+    background: #222;
+    font-family: "Poppins", sans-serif;
+    color: #b0b0b0;
+}
+.to-top{
+    width: 50px;
+    height: 50px;
+    background: rgba(78, 156, 181, 0.5);
+    border-radius: 50%;
+    line-height: 46px;
+    font-size: 18px;
+}
+.to-top:hover{
+    background-color: #4e9cb5;
+}
+footer .head-footer h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+footer .body-footer a{
+    color: #b0b0b0;
+    text-decoration: none;
+}
+footer .body-footer a:hover{
+    color: #4e9cb5
+}
+footer .body-footer button{
+    border: 1px solid #b0b0b0;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #b0b0b0;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 4px 13px;
+    font-size: 15px ;
+}
+footer .body-footer button:hover{
+    border-color: #4e9cb5;
+    color: #4e9cb5;
+}
+.copyright i:hover ,.copyright p span:hover{
+    color: #4e9cb5 !important;
+}
+
+
+/* ---------------------------------media query------------------------------------------- */
+
+
+
+@media (max-width: 767px) {
+    .m-sec>h2 {
+        font-size: 36px !important;
+        line-height: 1.2em;
+    }
+    .counter-content{
+        border:0px;
+    }
+}
